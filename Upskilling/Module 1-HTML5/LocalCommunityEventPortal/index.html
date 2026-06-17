@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main -->
+    <section id="home">
+        <div id="welcomeBanner">
+            Welcome to Community Event Portal
+            <span style="color:red; font-weight:bold;">
+                Special Offer: Free Registration
+            </span>
+        </div>
+
+        <p class="highlight">
+            Register for exciting community events.
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Event Gallery</h2>
+
+        <table border="1">
+            <tr>
+                <td>
+                    <img src="event1.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Music Festival
+                </td>
+
+                <td>
+                    <img src="event2.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Sports Meet
+                </td>
+
+                <td>
+                    <img src="event3.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Art Exhibition
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="event4.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Dance Show
+                </td>
+
+                <td>
+                    <img src="event5.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Food Festival
+                </td>
+
+                <td>
+                    <img src="event6.jpg" class="eventImg"
+                    ondblclick="enlarge(this)">
+                    <br>Book Fair
+                </td>
+            </tr>
+        </table>
+
+        <h2>Event Registration</h2>
+
+        <form>
+            Name:
+            <input type="text"
+                   placeholder="Enter Name"
+                   required
+                   autofocus>
+
+            Email:
+            <input type="email"
+                   placeholder="Enter Email"
+                   required>
+
+            Phone:
+            <input type="text"
+                   id="phone"
+                   onblur="validatePhone()">
+
+            Date:
+            <input type="date" required>
+
+            Event Type:
+            <select id="eventType"
+                    onchange="showFee()">
+                <option>Select</option>
+                <option>Music</option>
+                <option>Sports</option>
+                <option>Art</option>
+            </select>
+
+            <p id="fee"></p>
+
+            Message:
+            <textarea></textarea>
+
+            Feedback:
+            <textarea id="feedback"
+                      onkeyup="countChars()">
+            </textarea>
+
+            <p id="count">
+                Characters : 0
+            </p>
+
+            <button type="button"
+                    onclick="submitForm()">
+                Submit
+            </button>
+
+            <output id="result"></output>
+        </form>
+
+        <br>
+
+        <button onclick="clearData()">
+            Clear Preferences
+        </button>
+
+        <br><br>
+
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+
+        <p id="location"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Promo Video</h2>
+
+        <video width="400"
+               controls
+               oncanplay="videoReady()">
+            <source src="sample.mp4"
+                    type="video/mp4">
+        </video>
+
+        <p id="videoMsg"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Community Event Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

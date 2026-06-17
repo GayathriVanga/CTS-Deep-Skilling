@@ -1,0 +1,27 @@
+body{
+    font-family:Arial;
+    margin:20px;
+}
+
+#eventContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    border:1px solid gray;
+    padding:20px;
+    width:250px;
+}
+
+button{
+    background:blue;
+    color:white;
+    padding:10px;
+}
+
+#loading{
+    display:none;
+    color:red;
+}
